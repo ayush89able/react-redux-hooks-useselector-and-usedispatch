@@ -57,7 +57,7 @@ const storeState = useSelector(state => state)
        <FlexGrid>
       <FlexGrid.Row>
       <FlexGrid.Col >
-       <Heading level='h3'>Register</Heading>
+       <Heading level='h2'>Register</Heading>
        </FlexGrid.Col>
       </FlexGrid.Row>
       <FlexGrid.Row>
