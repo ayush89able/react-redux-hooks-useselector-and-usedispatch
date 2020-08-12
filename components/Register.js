@@ -41,6 +41,8 @@ const storeState = useSelector(state => state)
     setRegistered(false)
   }
 
+const {Row,Col}=FlexGrid
+
   return(
     <>
      { registered ? 
@@ -55,39 +57,41 @@ const storeState = useSelector(state => state)
      ) : 
      (
        <FlexGrid>
-      <FlexGrid.Row>
-      <FlexGrid.Col >
+       <Box vertical={2} between={2} horizontal={4}>
+      <Row>
+      <Col >
        <Heading level='h2'>Register</Heading>
-       </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-      <FlexGrid.Col xs={10}>
+       </Col>
+      </Row>
+      <Row>
+      <Col xs={10}>
         <Input label='First Name' type='text' name='firstName' onChange={(e)=>handleChange(e)}/>
-      </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-      <FlexGrid.Col xs={10}>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={10}>
         <Input label='Last Name' type='text' name='lastName' onChange={(e)=>handleChange(e)}/>
-      </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-      <FlexGrid.Col xs={10}>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={10}>
         <Input label='Email' type='text' name='email' onChange={(e)=>handleChange(e)}/>
-      </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-      <FlexGrid.Col xs={10}>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={10}>
         <Input label='Password' type='password' name='password' onChange={(e)=>handleChange(e)}/>
-      </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-      <FlexGrid.Col xs={10}>
+      </Col>
+      </Row>
+      <Row>
+      <Col xs={10}>
         <Input label='Mobile Number' type='tel' name='mobileNumber' onChange={(e)=>handleChange(e)}/>
-      </FlexGrid.Col>
-      </FlexGrid.Row>
+      </Col>
+      </Row>
         <div style={{margin:'auto',width:'100%',marginTop:'2em'}}>
         <Button onClick={onSubmit}>Submit</Button>
         </div>
+    </Box>
     </FlexGrid>
      )}
     </>
